@@ -14,7 +14,7 @@ func main() {
 	// make 函数, 专门用来创建引用类型数据,slice map chan
 	slice1 := make([]int, 3, 8) //3:表示长度,8:表示容量
 	fmt.Println(slice1)
-	fmt.Printf("容量 %d, 长度 %d\n", cap(slice1), len(slice1))
+	fmt.Printf("容量 %d, 长度 %d\n 类型%p", cap(slice1), len(slice1), slice1)
 	// 操作切片
 	slice1[0] = 1
 	slice1[1] = 2
