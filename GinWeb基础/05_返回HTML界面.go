@@ -12,10 +12,10 @@ func main() {
 	engine := gin.Default()
 	// 设置HTML路径
 	// .表示根目录
-	engine.LoadHTMLGlob("./Gin_Study/html/*")
+	engine.LoadHTMLGlob("./Gin/html/*")
 	// 设置静态资源
-	// 当Html中访问/img目录时候,实际访问的是./Gin_Study/img目录,这里的.表示程序的根目录
-	engine.Static("/img", "./Gin_Study/img")
+	// 当Html中访问/img目录时候,实际访问的是./Gin/img目录,这里的.表示程序的根目录
+	engine.Static("/img", "./Gin/img")
 	engine.GET("/hello", func(context *gin.Context) {
 		fmt.Println("请求路径", context.FullPath())
 		// 返回HTML文件

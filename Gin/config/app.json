@@ -1,0 +1,23 @@
+{
+  "app_name": "千峰外卖",
+  "app_mode": "debug",
+  "app_host": "localhost",
+  "app_port": "8085",
+  "sms": {
+    "sign_name": "ABC商城",
+    "template_code": "SMS_206536997",
+    "app_key": "LTAI4Fc58rtyuhnC5xfQybqro",
+    "app_secret": "f1xLZG4uNpaYPKp7v0tepBK5ozFz4",
+    "region_id": "cn-hangzhou"
+  },
+  "database": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "123qwe",
+    "host": "127.0.0.1",
+    "port": "3306",
+    "db_name": "ginsql",
+    "charset": "utf8",
+    "show_sql": true
+  }
+}
