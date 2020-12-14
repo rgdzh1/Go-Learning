@@ -7,12 +7,13 @@ import (
 )
 
 type Config struct {
-	AppName  string         `json:"app_name"`
-	AppMode  string         `json:"app_mode"`
-	AppHost  string         `json:"app_host"`
-	AppPort  string         `json:"app_port"`
-	Sms      SmsConfig      `json:"sms"`
-	DataBase DataBaseConfig `json:"database"`
+	AppName     string         `json:"app_name"`
+	AppMode     string         `json:"app_mode"`
+	AppHost     string         `json:"app_host"`
+	AppPort     string         `json:"app_port"`
+	Sms         SmsConfig      `json:"sms"`
+	DataBase    DataBaseConfig `json:"database"`
+	RedisConfig RedisConfig    `json:"redis_config"`
 }
 type SmsConfig struct {
 	SignName     string `json:"sign_name"`
@@ -30,6 +31,13 @@ type DataBaseConfig struct {
 	DBName   string `json:"db_name"`
 	Charset  string `json:"charset"`
 	ShowSql  bool   `json:"show_sql"`
+}
+
+type RedisConfig struct {
+	Addr     string `json:"addr"`
+	Port     string `json:"port"`
+	Password string `json:"password"`
+	Db       int    `json:"db"`
 }
 
 // _号,禁止访问
@@ -54,5 +62,4 @@ func ParseConfig(path string) (*Config, error) {
 		return nil, err
 	}
 	return _cfg, nil
-
 }

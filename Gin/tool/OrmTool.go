@@ -22,7 +22,7 @@ func InitOrmEngine(cfg *Config) (*OrmTool, error) {
 	}
 	engine.ShowSQL(dataBase.ShowSql)
 	// sync2 优化后的,更普遍, 这里是将结构体转化为数据库中的表
-	err = engine.Sync2(new(model.SmsCode), new(model.Member))
+	err = engine.Sync2(new(model.SmsCode), new(model.Member), new(model.FoodCategory))
 	if err != nil {
 		return nil, err
 	}
